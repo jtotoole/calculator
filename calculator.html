@@ -1,0 +1,62 @@
+<html>
+<body>
+<input type="text" id="firstNumber">
+<button id="add">+</button><button id="subtract">-</button>
+<button id="multiply">x</button><button id="divide">/</button>
+<form>
+  <script>
+  //for every event listener, you're going to have to select three elements:
+  //first number, second number and result box
+
+  //for the four operators, you need four different event listeners.
+  //--> button.addEventListener("click", addFunc)
+
+  var addition = document.querySelector("#add");
+  var addFunc = function () {
+    var firstbox = document.querySelector("#firstNumber");
+    var secondbox = document.querySelector("#secondNumber");
+    var resultbox = document.querySelector("#result");
+    var firstvalue = firstbox.value;
+    var secondvalue = secondbox.value;
+    resultbox.value = parseFloat(firstvalue) + parseFloat(secondvalue);
+  }
+  addition.addEventListener("click", addFunc);
+
+  var subtraction = document.querySelector("#subtract");
+  var subtractFunc = function () {
+    var firstbox = document.querySelector("#firstNumber");
+    var secondbox = document.querySelector("#secondNumber");
+    var resultbox = document.querySelector("#result");
+    var firstvalue = firstbox.value;
+    var secondvalue = secondbox.value;
+    resultbox.value = parseFloat(firstvalue) - parseFloat(secondvalue);
+  }
+  subtraction.addEventListener("click", subtractFunc);
+
+  var multiplication = document.querySelector("#multiply");
+  var multiplyFunc = function () {
+    var firstbox = document.querySelector("#firstNumber");
+    var secondbox = document.querySelector("#secondNumber");
+    var resultbox = document.querySelector("#result");
+    var firstvalue = firstbox.value;
+    var secondvalue = secondbox.value;
+    resultbox.value = parseFloat(firstvalue) * parseFloat(secondvalue);
+  }
+  multiplication.addEventListener("click", multiplyFunc);
+
+  var division = document.querySelector("#divide");
+  var divideFunc = function () {
+    var firstbox = document.querySelector("#firstNumber");
+    var secondbox = document.querySelector("#secondNumber");
+    var resultbox = document.querySelector("#result");
+    var firstvalue = firstbox.value;
+    var secondvalue = secondbox.value;
+    resultbox.value = parseFloat(firstvalue) / parseFloat(secondvalue);
+  }
+  division.addEventListener("click", divideFunc);
+  </script>
+  <input type="text" id="secondNumber">
+  <input type="text" id="result" value=resultbox readonly>
+</form>
+</body>
+</html>
